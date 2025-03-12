@@ -11,27 +11,24 @@ body {
     padding: 10px;
 }
 
+/* Container (Main Box) */
 .container {
     background: #F5F5F5;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
     text-align: center;
-    width: 50%;
-    max-width: 600px;
     transition: transform 0.2s;
 }
 
-.container:hover {
-    transform: scale(1.02);
-}
-
+/* Heading */
 h2 {
     color: #004D4D;
     font-weight: 600;
     font-size: 22px;
 }
 
+/* Labels */
 label {
     font-weight: 500;
     color: #006666;
@@ -41,6 +38,7 @@ label {
     margin: 12px 0 5px;
 }
 
+/* Input Fields & Select Dropdown */
 input, select {
     width: 100%;
     padding: 14px;
@@ -58,6 +56,7 @@ input:focus, select:focus {
     border-color: #008080;
 }
 
+/* Button Styling */
 button {
     width: 100%;
     padding: 16px;
@@ -76,9 +75,33 @@ button:hover {
     transform: scale(1.05);
 }
 
+/* Result Box */
 .result {
     margin-top: 20px;
     font-size: 18px;
     font-weight: bold;
     color: #004D4D;
+}
+
+/* 🔹 Desktop View (Larger Layout, Better Spacing) */
+@media (min-width: 768px) {
+    .container {
+        width: 50%;
+        max-width: 600px;
+    }
+}
+
+/* 🔹 Mobile View (Compact Layout, Touch-Friendly) */
+@media (max-width: 767px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+    input, select, button {
+        font-size: 16px;
+        padding: 12px;
+    }
+    h2 {
+        font-size: 20px;
+    }
 }
